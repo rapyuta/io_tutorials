@@ -1,0 +1,53 @@
+{
+  "apiVersion": "v1.0.0",
+  "name": "simon_says_ui",
+  "packageVersion": "v1.0.0",
+  "description": "",
+  "plans": [
+    {
+      "name": "default",
+      "metadata": {},
+      "singleton": false,
+      "components": [
+        {
+          "name": "default",
+          "description": "",
+          "cloudInfra": {
+            "replicas": 1,
+            "endpoints": [
+              {
+                "name": "URL",
+                "exposeExternally": true,
+                "port": 443,
+                "targetPort": 3000,
+                "proto": "HTTPS"
+              }
+            ]
+          },
+          "ros": {
+            "topics": [],
+            "services": [],
+            "actions": [],
+            "isROS": true
+          },
+          "requiredRuntime": "cloud",
+          "executables": [
+            {
+              "cmd": [],
+              "Docker": "rrdockerhub/simon_says_ui"
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "includePackages": [],
+      "dependentDeployments": [],
+      "exposedParameters": [],
+      "inboundROSInterfaces": {
+        "topics": [],
+        "services": [],
+        "actions": []
+      }
+    }
+  ]
+}
